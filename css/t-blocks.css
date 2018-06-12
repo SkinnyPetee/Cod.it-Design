@@ -1,0 +1,115 @@
+
+.t-blocks {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+
+
+.t-block {
+  width: 50%;
+  margin: 7px;
+  /* border: 5px dashed black; */
+  height: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+
+}
+
+.t-block:first-child {
+  margin-left: 0;
+}
+
+.t-block:last-child {
+  margin-right: 0;
+}
+
+.t-block img {
+  object-fit: cover;
+  width: 100%;
+  height: 40%;
+}
+
+.t-block h2 {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin : 14px 0;
+
+  /* code for overflow */
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+}
+
+.t-block p {
+  font-weight: 400;
+  color: rgba(0,0,0,0.5);
+  font-size: 0.9rem;
+
+  /* code for overflow */
+
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.user-info {
+
+  height: 50px;
+  width: 100%;
+  margin : 20px 0;
+}
+
+.user-info a {
+  color: black;
+  font-weight: 100;
+  text-decoration: none;
+
+}
+
+
+.user-info p {
+  color: rgba(0,0,0,0.4);
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+
+.user-info p span {
+  position: relative;
+  top : -5px;
+}
+
+@media only screen and (max-width: 960px) {
+    .t-block:last-child {
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    .t-block h2 {
+      font-size: 1.2rem;
+    }
+    .t-blocks {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+    .t-block {
+      width: 100%;
+    }
+    .t-block:last-child {
+      display: block;
+    }
+}
